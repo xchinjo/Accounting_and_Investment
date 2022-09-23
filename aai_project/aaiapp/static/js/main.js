@@ -1,15 +1,15 @@
 // Initialize and add the map
-function initMap() {
-  // Your location
-  const loc = { lat: 42.361145, lng: -71.057083 };
-  // Centered map on location
-  const map = new google.maps.Map(document.querySelector('.map'), {
-    zoom: 14,
-    center: loc
-  });
-  // The marker, positioned at location
-  const marker = new google.maps.Marker({ position: loc, map: map });
-}
+// function initMap() {
+//   // Your location
+//   const loc = { lat: 42.361145, lng: -71.057083 };
+//   // Centered map on location
+//   const map = new google.maps.Map(document.querySelector('.map'), {
+//     zoom: 14,
+//     center: loc
+//   });
+//   // The marker, positioned at location
+//   const marker = new google.maps.Marker({ position: loc, map: map });
+// }
 
 // Sticky menu background
 window.addEventListener('scroll', function() {
@@ -36,3 +36,27 @@ $('#navbar a, .btn').on('click', function(event) {
     );
   }
 });
+
+function validate(){
+    var n = document.getElementById("name");
+    var e = document.getElementById("email");
+    var ph = document.getElementById("phone");
+    if(n.value==""){
+      alert("Enter name");
+      n.focus();
+      return false;
+    }
+    if(e.value=="")
+    {
+      alert("Please enter email");
+      e.focus();
+      return false;
+    }
+  
+    if(ph.value==""|){
+      alert("Enter Phone Number");
+      ph.focus();
+      return false;
+    }
+    
+}

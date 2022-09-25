@@ -1,8 +1,5 @@
-import email
-from email import message
 from django.shortcuts import render
-
-from aai_project.aaiapp.models import AiModel
+from .models import AiModel
 
 def home(request):
     if request.method=="POST":

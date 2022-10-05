@@ -1,4 +1,8 @@
 from django.contrib import admin
 from .models import AiModel
 
-admin.site.register(AiModel)
+class AiAdmin(admin.ModelAdmin):
+    list_display = ("name","crdt")
+    list_filter = ("crdt",)
+
+admin.site.register(AiModel, AiAdmin)

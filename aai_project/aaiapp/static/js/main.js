@@ -53,7 +53,7 @@ function validate(){
       return false;
     }
   
-    if(ph.value==""|){
+    if(ph.value==""){
       alert("Enter Phone Number");
       ph.focus();
       return false;
